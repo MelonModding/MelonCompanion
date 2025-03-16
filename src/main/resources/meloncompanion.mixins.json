@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "meloncompanion.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+
+  ],
+  "client": [
+    "GameSettingsMixin",
+    "PlayerMixinMagnet",
+    "EntityItemMixin",
+    "PlayerMixinElevator"
+  ],
+  "server": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
