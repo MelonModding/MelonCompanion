@@ -1,5 +1,6 @@
 package meloncompanion.mixins;
 
+import meloncompanion.ItemModelMagnet;
 import meloncompanion.MelonCompanion;
 import meloncompanion.interfaces.PlayerMagnetInterface;
 import net.minecraft.core.entity.player.Player;
@@ -32,12 +33,15 @@ public abstract class PlayerMixinMagnet implements PlayerMagnetInterface {
 			ItemStack headItem = this.inventory.armorInventory[IArmorItem.PIECE_HEAD];
 			ItemStack heldItem = this.getHeldItem();
 
-			if(headItem != null && headItem.getItem().equals(Items.AMMO_FIREBALL) && headItem.getMetadata() == 1
-			|| heldItem != null && heldItem.getItem().equals(Items.AMMO_FIREBALL) && heldItem.getMetadata() == 1) {
-				hasMagnet = true;
-			} else {
-				hasMagnet = false;
-			}
+			hasMagnet =
+				//item on head check
+				headItem != null &&
+				headItem.getItem().equals(Items.AMMO_FIREBALL) &&
+				headItem.getMetadata() == ItemModelMagnet.MAGNET ||
+				//held item check
+				heldItem != null &&
+				heldItem.getItem().equals(Items.AMMO_FIREBALL) &&
+				heldItem.getMetadata() == ItemModelMagnet.MAGNET;
 		}
 	}
 

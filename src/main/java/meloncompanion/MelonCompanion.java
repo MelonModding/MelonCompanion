@@ -14,6 +14,7 @@ import net.minecraft.client.option.OptionRange;
 import net.minecraft.client.render.texture.stitcher.TextureRegistry;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
+import net.minecraft.core.net.command.TextFormatting;
 import net.minecraft.core.util.helper.DyeColor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -96,37 +97,16 @@ public class MelonCompanion implements ModInitializer, RecipeEntrypoint, GameSta
 	public void onRecipesReady() {
 
 		ItemStack magnet = new ItemStack(Items.AMMO_FIREBALL, 1, 1);
-		magnet.setCustomName("Magnet");
+		magnet.setCustomName(TextFormatting.RESET + "Magnet");
 
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"ISR",
-				"S  ",
-				"ISL")
-			.addInput('R', Items.DUST_REDSTONE)
-			.addInput('L', Items.DYE, DyeColor.BLUE.itemMeta)
-			.addInput('S', Items.INGOT_STEEL)
-			.addInput('I', Items.INGOT_IRON)
-			.create("magnet", magnet);
-		RecipeBuilder.Shaped(MOD_ID)
-			.setShape(
-				"ISL",
-				"S  ",
-				"ISR")
-			.addInput('R', Items.DUST_REDSTONE)
-			.addInput('L', Items.DYE, DyeColor.BLUE.itemMeta)
-			.addInput('S', Items.INGOT_STEEL)
-			.addInput('I', Items.INGOT_IRON)
-			.create("magnet", magnet);
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape(
 				"R L",
 				"S S",
-				"ISI")
+				"SSS")
 			.addInput('R', Items.DUST_REDSTONE)
 			.addInput('L', Items.DYE, DyeColor.BLUE.itemMeta)
 			.addInput('S', Items.INGOT_STEEL)
-			.addInput('I', Items.INGOT_IRON)
 			.create("magnet", magnet);
 	}
 

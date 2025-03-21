@@ -7,13 +7,12 @@
 
   ],
   "client": [
-    "GameSettingsMixin",
-    "PlayerMixinMagnet",
     "EntityItemMixin",
-    "PlayerMixinElevator"
+    "GameSettingsMixin",
+    "PlayerMixinElevator",
+    "PlayerMixinMagnet"
   ],
   "server": [
-
   ],
   "injectors": {
     "defaultRequire": 1
