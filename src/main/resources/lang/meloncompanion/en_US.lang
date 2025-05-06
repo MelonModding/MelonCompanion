@@ -1,0 +1,10 @@
+options.meloncompanion.title=Melon Utilities
+
+options.meloncompanion.category.elevators=Elevators
+options.meloncompanion.category.elevators.enabled=Elevators
+options.meloncompanion.category.elevators.allowObstructions=Allow Obstructions
+options.meloncompanion.category.elevators.cooldown=Cooldown
+
+options.meloncompanion.category.magnets=Magnets
+options.meloncompanion.category.magnets.enabled=Magnets
+

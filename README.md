@@ -1,2 +1,2 @@
-# MelonUtilities
- A server utilities mod for BTA
+# Melon Companion
+ A client companion mod for Melon Utilities

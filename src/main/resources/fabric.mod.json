@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "melonutilities",
+  "id": "meloncompanion",
   "version": "${version}",
 
-  "name": "MelonUtilities",
-  "description": "An Extensive Utility Mod For BTA Servers.",
+  "name": "MelonCompanion",
+  "description": "A Client Companion mod for MelonUtilities",
   "authors": [
     "MelonModding"
   ],
@@ -13,17 +13,32 @@
     "sources": ""
   },
 
-	"icon": "icon.png",
+	"icon": "melonlogo.png",
   "license": "MIT",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-			"MelonUtilities.MelonUtilities"
-    ]
+			"meloncompanion.MelonCompanion"
+    ],
+		"beforeGameStart": [
+			"meloncompanion.MelonCompanion"
+		],
+		"beforeClientStart": [
+			"meloncompanion.MelonCompanion"
+		],
+		"afterClientStart": [
+			"meloncompanion.MelonCompanion"
+		],
+		"afterGameStart": [
+			"meloncompanion.MelonCompanion"
+		],
+		"recipesReady": [
+			"meloncompanion.MelonCompanion"
+		]
 	},
   "mixins": [
-		"MelonUtilities.mixins.json"
+		"meloncompanion.mixins.json"
   ],
 
   "depends": {
